@@ -16,8 +16,11 @@ let package = Package(
     targets: [
         .target(
             name: "bad_query",
-            path: "Sources/bad_query",
-            publicHeadersPath: "include",
+            path: "Sources",
+            sources: [
+                "bad_query.c"
+            ],
+            publicHeadersPath: "Includes",
             linkerSettings: [
                 .linkedLibrary("xpc")
             ]
